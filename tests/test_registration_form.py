@@ -1,13 +1,14 @@
 import os
-from selene import browser, have
+from selene import have, browser
 from selene.core.command import js
 import allure
 import tests
 
 @allure.title('Успешное заполнение формы регистарции')
 def test_fill_registration_form():
+
     with allure.step("Открываем главну страницу"):
-        browser.open('https://demoqa.com/automation-practice-form')
+        browser.open('/automation-practice-form')
 
     with allure.step("Заполняем имя"):
         browser.element('#firstName').type("Test_Name")
